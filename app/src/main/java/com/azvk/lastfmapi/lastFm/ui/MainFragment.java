@@ -62,6 +62,7 @@ public class MainFragment extends Fragment implements MainInterface.View, MainAd
 
     @Override
     public void onComplete(List<Track> data) {
+        adapter.updateAdapter(data);
     }
 
     @Override
