@@ -3,6 +3,7 @@ package com.azvk.lastfmapi;
 import android.app.Application;
 
 import com.azvk.lastfmapi.dependencies.AppModule;
+import com.azvk.lastfmapi.dependencies.DaggerNetComponent;
 import com.azvk.lastfmapi.dependencies.NetComponent;
 import com.azvk.lastfmapi.dependencies.NetModule;
 import com.azvk.lastfmapi.lastFm.build.MainComponent;
