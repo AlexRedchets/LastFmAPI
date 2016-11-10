@@ -1,6 +1,5 @@
 package com.azvk.lastfmapi.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -8,11 +7,11 @@ import com.google.gson.annotations.SerializedName;
 
 public class Tracks {
 
-    @SerializedName("track")
-    @Expose
-    private List<Track> track = new ArrayList<Track>();
-    @SerializedName("@attr")
-    @Expose
+   /* @SerializedName("track")
+    @Expose*/
+    private List<Track> track;
+   /* @SerializedName("@attr")
+    @Expose*/
     private Attr attr;
 
     public List<Track> getTrack() {

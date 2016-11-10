@@ -21,7 +21,7 @@ public class App extends Application {
 
         netComponent = DaggerNetComponent.builder()
                 .appModule(new AppModule(this))
-                .netModule(new NetModule("http://gateway.marvel.com/v1/public/"))
+                .netModule(new NetModule("http://ws.audioscrobbler.com/2.0/"))
                 .build();
     }
 

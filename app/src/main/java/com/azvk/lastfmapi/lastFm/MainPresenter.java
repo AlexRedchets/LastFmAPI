@@ -31,6 +31,7 @@ public class MainPresenter implements MainInterface.Presenter {
 
     @Override
     public void fetchData() {
+        Log.i(TAG, "fetchData started");
 
         retrofit.create(LastFmClient.class).getRepos("chart.gettoptracks", "6851ebd7175ef7d058c9c565c9bf5d84", "json")
                 .subscribeOn(Schedulers.newThread())
@@ -39,7 +40,7 @@ public class MainPresenter implements MainInterface.Presenter {
                 .subscribe(repos -> {
                             Log.e(TAG, "Successfully got data");
 
-                            view.onComplete(repos);
+                            view.onComplete(repos.getTracks().getTrack());
                         },
                         throwable -> {
                             Log.e("Error", throwable.getMessage());
