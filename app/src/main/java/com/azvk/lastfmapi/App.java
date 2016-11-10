@@ -25,7 +25,7 @@ public class App extends Application {
                 .build();
     }
 
-    public MainComponent getMarvelComponent(MainInterface.View view){
+    public MainComponent getMainComponent(MainInterface.View view){
         mainComponent = netComponent.plus(new MainModule(view));
         return mainComponent;
     }
