@@ -1,10 +1,13 @@
 package com.azvk.lastfmapi.lastFm.ui;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +23,7 @@ import com.azvk.lastfmapi.App;
 import com.azvk.lastfmapi.R;
 import com.azvk.lastfmapi.lastFm.MainAdapter;
 import com.azvk.lastfmapi.lastFm.MainPresenter;
+import com.azvk.lastfmapi.lastFm.SplashActivity;
 import com.azvk.lastfmapi.model.Track;
 
 import java.util.List;
@@ -92,6 +96,11 @@ public class MainFragment extends Fragment implements MainInterface.View, MainAd
     @Override
     public void onClick(Track track) {
         Toast.makeText(getContext(), track.getName(), Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(getActivity(), TrackInfoActivity.class);
+        intent.putExtra("image", track.getImage().get(3).getText().toString());
+        intent.putExtra("story", track.getName());
+        startActivity(intent);
     }
 
     /**

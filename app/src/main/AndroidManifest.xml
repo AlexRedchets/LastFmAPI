@@ -20,6 +20,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lastFm.ui.TrackInfoActivity"
+            android:parentActivityName=".lastFm.ui.MainActivity"
+            android:theme="@style/AppThemeWithToolbar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".lastFm.ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -66,7 +66,12 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder>{
         Picasso.with(context).load(currentData.getImage().get(3).getText()).into(holder.image);
 
         holder.dots.setOnClickListener(v -> showPopupMenu(holder.dots));
+        holder.image.setOnClickListener(v -> callTrackInfoFragment(position));
 
+    }
+
+    private void callTrackInfoFragment(int position) {
+        clickListener.onClick(response.get(position));
     }
 
     /**
