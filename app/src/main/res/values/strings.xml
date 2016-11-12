@@ -5,4 +5,14 @@
     <string name="action_play_next">Play Next</string>
     <string name="backdrop_title">LOVE MUSIC</string>
     <string name="backdrop_subtitle">This season top 20 albums</string>
+
+    <string name="slide_1_title">Favourite Music</string>
+    <string name="slide_1_text">Listen your music anytime and anywhere</string>
+    <string name="slide_2_title">Top Charts</string>
+    <string name="slide_2_text">The week\'s most popular current songs</string>
+    <string name="slide_3_title">Best and Free</string>
+    <string name="slide_3_text">Download free MP3 songs</string>
+    <string name="button_intro_next">Next</string>
+    <string name="button_intro_skip">Skip</string>
+    <string name="start">Got it</string>
 </resources>

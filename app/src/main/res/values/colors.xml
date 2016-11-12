@@ -5,4 +5,15 @@
     <color name="colorAccent">#FF4081</color>
     <color name="viewBg">#f1f5f8</color>
     <color name="album_title">#4c4c4c</color>
+
+    <!--Intro Slides-->
+    <color name="color_background_slide_1">#40945c</color>
+    <color name="color_background_slide_2">#757cda</color>
+    <color name="color_background_slide_3">#867a83</color>
+
+    <color name="dot_inactive">#ffffff</color>
+    <color name="dot_active">#ead42c</color>
+
+
+
 </resources>
