@@ -6,14 +6,14 @@ import java.util.List;
 
 public interface MainInterface {
 
-    interface View{
+    interface TopView{
 
         void onComplete(List<Track> data);
 
         void onError(String message);
     }
 
-    interface Presenter{
+    interface TopPresenter{
 
         void fetchData();
 

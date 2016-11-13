@@ -8,15 +8,15 @@ import dagger.Provides;
 @Module
 public class MainModule {
 
-    private MainInterface.View view;
+    private MainInterface.TopView view;
 
-    public MainModule(MainInterface.View view) {
+    public MainModule(MainInterface.TopView view) {
         this.view = view;
     }
 
     @Provides
     @CustomScope
-    MainInterface.View getView(){
+    MainInterface.TopView getView(){
         return view;
     }
 }

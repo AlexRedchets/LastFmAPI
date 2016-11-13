@@ -12,15 +12,17 @@ import butterknife.BindView;
 
 public class TrackInfoActivity extends AppCompatActivity {
 
-    @BindView(R.id.track_info_image)
+    /*@BindView(R.id.track_info_image)
     ImageView trackImage;
     @BindView(R.id.track_info_story)
-    TextView trackStory;
+    TextView trackStory;*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_track_info);
+
+
     }
 
     @Override

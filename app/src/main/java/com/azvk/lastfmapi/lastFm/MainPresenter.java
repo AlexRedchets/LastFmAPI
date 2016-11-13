@@ -15,15 +15,15 @@ import rx.schedulers.Schedulers;
  * Created by azvk on 2016-11-10.
  */
 
-public class MainPresenter implements MainInterface.Presenter {
+public class MainPresenter implements MainInterface.TopPresenter {
 
     private Retrofit retrofit;
-    private MainInterface.View view;
+    private MainInterface.TopView view;
 
     private static final String TAG = MainPresenter.class.getSimpleName();
 
     @Inject
-    public MainPresenter(Retrofit retrofit, MainInterface.View view) {
+    public MainPresenter(Retrofit retrofit, MainInterface.TopView view) {
         this.retrofit = retrofit;
         this.view = view;
     }
@@ -33,7 +33,7 @@ public class MainPresenter implements MainInterface.Presenter {
     public void fetchData() {
         Log.i(TAG, "fetchData started");
 
-        retrofit.create(LastFmClient.class).getRepos("chart.gettoptracks", "6851ebd7175ef7d058c9c565c9bf5d84", "json")
+        retrofit.create(LastFmClient.class).getTopTracks("chart.gettoptracks", "6851ebd7175ef7d058c9c565c9bf5d84", "json")
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .unsubscribeOn(Schedulers.io())

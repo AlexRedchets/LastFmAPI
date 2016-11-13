@@ -33,7 +33,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainFragment extends Fragment implements MainInterface.View, MainAdapter.ClickListener{
+public class MainFragment extends Fragment implements MainInterface.TopView, MainAdapter.ClickListener{
 
     @Inject
     MainPresenter presenter;
